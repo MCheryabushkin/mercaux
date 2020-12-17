@@ -34,11 +34,10 @@ sliderContainer.addEventListener("click", (el) => nextSlide());
 /*
 When the cursor is over the slide or navigation buttons - automatic scrolling stops
 */
-const updateIntervelSlider = () => sliderInterval = setInterval(nextSlide, 2000);
 
 sliderContainer.onmouseover = () => clearInterval(sliderInterval);
-sliderContainer.onmouseout = () => updateIntervelSlider();
+sliderContainer.onmouseout = () => sliderInterval = setInterval(nextSlide, 2000);
 prevButton.onmouseover = () => clearInterval(sliderInterval);
-prevButton.onmouseout = () => updateIntervelSlider();
+prevButton.onmouseout = () => sliderInterval = setInterval(nextSlide, 2000);
 nextButton.onmouseover = () => clearInterval(sliderInterval);
-nextButton.onmouseout = () => updateIntervelSlider();
+nextButton.onmouseout = () => sliderInterval = setInterval(nextSlide, 2000);
