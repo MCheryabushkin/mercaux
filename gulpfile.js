@@ -6,10 +6,11 @@ const clean = require("gulp-clean");
 const server = require("browser-sync").create();
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
-const imagemin = require('gulp-imagemin')
+const babel = require("gulp-babel");
+const uglify = require("gulp-uglify");
+const concat = require("gulp-concat");
+const imagemin = require("gulp-imagemin")
+const ghPages = require("gulp-gh-pages");
 
 const html = () => {
   return gulp
@@ -74,8 +75,12 @@ const serv = (cb) => {
   return cb();
 };
 
+const deploy = () => gulp.src("./build/**/*").pipe(ghPages());
+
 exports.dev = series(
-  //   cleanBuild,
+  cleanBuild,
   parallel(html, styles, scripts, images),
   parallel(serv)
 );
+
+exports.deploy = series(deploy);
