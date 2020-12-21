@@ -1,0 +1,11 @@
+.background {
+    width: 100%;
+    height: 400px;
+    background: url("../images/task9/section-4-back@2x.jpg") -165px center no-repeat;
+    background-size: cover;
+
+    @media(min-width: 560px) {
+        background: url("../images/task9/section-4-back@2x.jpg") left center no-repeat;
+        background-size: cover;
+    }
+}
