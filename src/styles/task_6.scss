@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    position: relative;
+    min-height: 150vh;
+}
+.footer {
+    position: sticky;
+    top: 100%;
+    border: 1px solid;
+    height: 40px;
+
+    p {
+        text-align: center;
+    }
+}
