@@ -3,18 +3,25 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/task_5.css")
         title Task 5
     body
-
-        a(href= "index.html") Main page
-        h1 Task 5
 
         .container
             header.header
                 .header__logo
                     img(src="images/task1/FinnFlare.svg", alt="")
-                .header__nav.nav
-                    .nav__item
-                        p First item
-                    .nav__item
-                        p Second item
+                .header__navbar.navbar
+                    .navbar__item
+                        a(href='#home') Home
+                    .navbar__item.navbar__dropdown.nav-dropdown
+                        a(href="javascript:;") Items
+                        .nav-dropdown__subitem
+                            a(href='#') Link 1
+                            a(href='#') Link 2
+                            a(href='#') Link 3
+
+            a(href= "index.html") Main page
+            h1 Task 5
+
+        script(src="js/main.min.js")
