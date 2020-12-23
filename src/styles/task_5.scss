@@ -17,6 +17,7 @@ body,
     position: sticky;
     top: 0;
     transition: heigth .8s linear;
+    background: #fff;
     
     &__logo {
         padding: 10px 30px;
@@ -46,6 +47,7 @@ body,
 
             img {
                 filter: invert(1);
+                max-width: 80%;
             }
         }
 
