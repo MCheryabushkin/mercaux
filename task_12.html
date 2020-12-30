@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Task 12</title>
+  </head>
+  <body>
+    <div class="container"><a class="main-link" href="index.html">Main page</a>
+      <h1>Task 12</h1>
+      <button class="open-form-btn">Open form</button>
+      <p class="success-text"></p>
+      <div class="modal">
+        <div class="modal__container">
+          <div class="modal__header">
+            <div class="modal__close-btn">&#10006;</div>
+          </div>
+          <div class="modal__body">
+            <form action="POST">
+              <label for="email">Email</label>
+              <input type="email" name="email"/>
+              <label for="name">Your name</label>
+              <input type="text" name="name"/>
+              <label for="name">Some information</label>
+              <textarea name="information" rows="4"></textarea>
+              <button class="modal__submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
