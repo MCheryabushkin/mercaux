@@ -3,22 +3,12 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
         title Mercaux
     body
-        mixin list(name, href)
-            li
-                a(href= href)= name
         
-        ul
-            +list('Задание 1', 'task_1.html')
-            +list('Задание 2', 'task_2.html')
-            +list('Задание 3', 'task_3.html')
-            +list('Задание 4', 'task_4.html')
-            +list('Задание 5', 'task_5.html')
-            +list('Задание 6', 'task_6.html')
-            +list('Задание 7', 'task_7.html')
-            +list('Задание 8', 'task_8.html')
-            +list('Задание 9', 'task_9.html')
-            +list('Задание 10', 'task_10.html')
-            +list('Задание 11', '#')
-            +list('Задание 12', '#')
+        ol.main-menu
+            -for (var i = 1; i <= 12; i++) {
+                li
+                    a(href= `task_${i}.html` target="_blank")= `Task ${i}`
+            -}

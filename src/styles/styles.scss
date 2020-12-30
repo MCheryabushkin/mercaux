@@ -1,0 +1,87 @@
+@import "fonts.scss";
+
+@import "task_1.scss";
+@import "task_2.scss";
+@import "task_3.scss";
+@import "task_4.scss";
+@import "task_5.scss";
+@import "task_6.scss";
+@import "task_7.scss";
+@import "task_8.scss";
+@import "task_9.scss";
+@import "task_10.scss";
+@import "task_12.scss";
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 20px 50px;
+}
+
+.main-menu {
+    li {
+        margin-bottom: 8px;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 20px;
+            color: #000;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background: rgb(61, 165, 47);
+                transition: all .4s .2s;
+            }
+
+            &:hover {
+                color: rgb(61, 165, 47);
+                transition-delay: .2s;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.main-link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+    position: relative;
+    transition: all .4s .2s;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: rgb(61, 165, 47);
+        transition: all .4s .2s;
+    }
+
+    &:hover {
+        color: rgb(61, 165, 47);
+        transition-delay: .2s;
+
+        &:after {
+            width: 100%;
+        }
+    }
+}

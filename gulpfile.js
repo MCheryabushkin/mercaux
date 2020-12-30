@@ -9,8 +9,10 @@ const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
-const imagemin = require("gulp-imagemin")
+const imagemin = require("gulp-imagemin");
 const ghPages = require("gulp-gh-pages");
+const cleanCSS = require('gulp-clean-css');
+const modifyCssUrls = require('gulp-modify-css-urls');
 
 const html = () => {
   return gulp
@@ -24,7 +26,7 @@ const html = () => {
 };
 const styles = () => {
   return gulp
-    .src("src/styles/**/*.scss")
+    .src("src/styles/styles.scss")
     .pipe(sass())
     .pipe(
       autoprefixer({
@@ -57,11 +59,19 @@ const images = () => {
     .pipe(gulp.dest("build/images"));
 };
 
+const fonts = () => {
+  return gulp
+    .src("src/fonts/**/*.{ttf,woff,eot,svg}")
+    .pipe(gulp.dest("build/fonts"));
+};
+
 const watch = () => {
   gulp.watch("src/pug/**/*.pug", html).on("change", server.reload);
   gulp.watch("src/styles/**/*.scss", styles).on("change", server.reload);
   gulp.watch("src/scripts/**/*.js", scripts).on("change", server.reload);
-  gulp.watch("src/images/**/*.{gif,png,jpg,svg,webp}", images).on("change", server.reload);
+  gulp
+    .watch("src/images/**/*.{gif,png,jpg,svg,webp}", images)
+    .on("change", server.reload);
 };
 
 const serv = (cb) => {
@@ -79,7 +89,7 @@ const deploy = () => gulp.src("./build/**/*").pipe(ghPages());
 
 exports.dev = series(
   cleanBuild,
-  parallel(html, styles, scripts, images),
+  parallel(html, styles, scripts, images, fonts),
   parallel(serv)
 );
 

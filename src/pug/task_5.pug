@@ -3,11 +3,11 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/task_5.css")
+        link(rel="stylesheet", href="css/styles.css")
         title Task 5
     body
 
-        .container
+        .container--high
             header.header
                 .header__logo
                     img(src="images/task1/FinnFlare.svg", alt="")
@@ -20,8 +20,8 @@ html(lang="en")
                             a(href='#') Link 1
                             a(href='#') Link 2
                             a(href='#') Link 3
-
-            a(href= "index.html") Main page
-            h1 Task 5
+            .container
+                a(href= "index.html").main-link Main page
+                h1 Task 5
 
         script(src="js/main.min.js")

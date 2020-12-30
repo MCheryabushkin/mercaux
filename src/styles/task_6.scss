@@ -1,15 +1,16 @@
-body {
+body.body-footer {
     margin: 0;
     position: relative;
     min-height: 150vh;
 }
 .footer {
+    padding: 8px 0;
     position: sticky;
     top: 100%;
     border: 1px solid;
-    height: 40px;
 
     p {
+        margin: 0;
         text-align: center;
     }
 }

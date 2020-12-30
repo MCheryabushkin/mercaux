@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        title Task 12
+    body
+
+        .container
+            a(href= "index.html").main-link Main page
+            h1 Task 12
+
+            button.open-form-btn Open form
+
+            p.success-text
+
+            .modal
+                .modal__container
+                    .modal__header
+                        .modal__close-btn &#10006;
+                    .modal__body
+                        form(action="POST")
+                            label(for="email") Email
+                            input(type="email" name="email")
+                            label(for="name") Your name
+                            input(type="text" name="name")
+                            label(for="name") Some information
+                            textarea(name="information", rows="4")
+
+                            button.modal__submit Submit
+
+        script(src="js/main.min.js")

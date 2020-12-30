@@ -1,8 +1,10 @@
 .slider {
     // border: 1px solid;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 1000px;
     
     &__body {
         padding-bottom: 40px;
@@ -14,7 +16,7 @@
     &__arrow {
         width: 70px;
         height: 100px;
-        background: url("images/task4/arrow.svg") center no-repeat;
+        background: url("../images/task4/arrow.svg") center no-repeat;
         cursor: pointer;
 
         &--prev {
